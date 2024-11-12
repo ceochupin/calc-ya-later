@@ -1,0 +1,119 @@
+.page {
+    display: grid;
+    gap: 30px;
+    justify-items: center;
+    align-content: space-around;
+    block-size: 100dvb;
+    font-family: 'PT Mono Regular', monospace;
+    font-size: 16px;
+    background: linear-gradient(45deg, #59ade1, #96d5ee, #d493c1);
+}
+
+.header__title {
+    font-size: 48px;
+    text-shadow: 4px 4px 2px rgb(0 0 0 / 0.2);
+}
+
+.calc {
+    inline-size: 100%;
+    block-size: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgb(255 255 255 / 0.3);
+}
+
+.calc__display-container {
+    background: linear-gradient(to top left, #90f1f1 0 50%, #65f1f1 50% 100%);
+    inline-size: 100%;
+    padding-inline: 5px;
+    margin-block-end: 10px;
+    display: flex;
+    place-content: center end;
+    border-radius: 5px;
+}
+
+.calc__display {
+    font-size: 72px;
+}
+
+.calc__buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+.calc__operands {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.calc__operators {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.calc__settings {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.button {
+    font-size: 32px;
+    border: none;
+    border-radius: 5px;
+    min-inline-size: 100px;
+    min-block-size: 60px;
+    cursor: pointer;
+}
+
+.button--number {
+    background: #cfaae9;
+}
+
+.button--number:hover {
+    background: #e9aae3;
+}
+
+.button--operator {
+    background: #b0aae9;
+}
+
+.button--operator:hover {
+    background: #cfaae9;
+}
+
+#operator:focus {
+    background: #cfaae9;
+}
+
+.button--clear,
+.button--backspace {
+    background: #e9aac4;
+}
+
+.button--clear:hover,
+.button--backspace:hover {
+    background: #e9b0aa;
+}
+
+.button--result {
+    grid-row: span 2;
+    background: #c4e9aa;
+}
+
+.button--result:hover {
+    background: #aae9b0;
+}
+
+.footer__link {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer__icon {
+    inline-size: 40px;
+}

@@ -1,0 +1,51 @@
+{
+  "name": "calc-ya-later",
+  "version": "1.0.0",
+  "description": "https://github.com/ceochupin/calc-ya-later",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "build:dev": "webpack --config webpack.dev.js",
+    "lint": "stylelint './src/**/*.{scss,css}'",
+    "lint:fix": "stylelint \"./src/**/*.{scss,css}\" --fix",
+    "format": "prettier --write './src/**/*.{html,scss,css,js}'",
+    "format:check": "prettier --check './src/**/*.{html,scss,css,js}'",
+    "check": "npm run format:check && npm run lint",
+    "fix": "npm run format && npm run lint:fix",
+    "prebuild": "npm run fix",
+    "predeploy": "npm run build",
+    "deploy": "npx gh-pages-clean && gh-pages -d dist"
+  },
+  "author": "Vladimir Chupin",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "autoprefixer": "^10.4.20",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "gh-pages": "^6.2.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.9.1",
+    "postcss-loader": "^8.1.1",
+    "prettier": "^3.3.3",
+    "sass": "^1.79.4",
+    "sass-loader": "^16.0.2",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-prettier": "^5.0.2",
+    "terser-webpack-plugin": "^5.3.10",
+    "util": "^0.12.5",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0",
+    "webpack-merge": "^6.0.1"
+  },
+  "browserslist": [
+    "last 10 versions"
+  ],
+  "homepage": "./"
+}

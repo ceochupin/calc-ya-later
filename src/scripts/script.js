@@ -78,17 +78,9 @@ function inputEquals() {
   if (result === 'error') {
     displayValue = ERROR_DIVISION_BY_ZERO;
     firstOperand = null;
-    // secondOperand = null;
-    // firstOperator = null;
-    // secondOperator = null;
-    // result = null;
   } else {
     displayValue = String(result);
     firstOperand = displayValue;
-    // secondOperand = null;
-    // firstOperator = null;
-    // secondOperator = null;
-    // result = null;
   }
 
   secondOperand = null;
